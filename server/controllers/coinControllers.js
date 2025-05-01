@@ -356,7 +356,7 @@ exports.buyTokens = catchAsync(async (req, res, next) => {
     const usdtAmount = amount * nativeUsd;
     const currentPrice = priceFunction(coin.currentCoinSupply, coin.coinLiquidity);
 
-    let tokenQty = usdtAmount / currentPrice;
+   let tokenQty =  amount / 0.00001;;
     if (coin.currentCoinSupply + tokenQty > coin.totalSupply) {
         tokenQty = coin.totalSupply - coin.currentCoinSupply;
     }
