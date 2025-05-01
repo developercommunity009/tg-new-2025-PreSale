@@ -89,10 +89,7 @@ CoinSchema.pre('save', function (next) {
     next();
 });
 
-// Create indexes for frequently queried fields
-CoinSchema.index({ ticker: 1 });
-CoinSchema.index({ creator: 1 });
-CoinSchema.index({ token_address: 1 });
+
 
 // Export the model
 module.exports = mongoose.model('Coin', CoinSchema);
