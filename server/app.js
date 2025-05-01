@@ -33,6 +33,7 @@ const app = express();
 const httpServer = http.createServer(app);
 
 // Security Middleware
+app.set('trust proxy', true)
 app.use(helmet());
 app.use(mongoSanitize());
 app.use(xss());
