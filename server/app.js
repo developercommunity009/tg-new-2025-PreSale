@@ -45,7 +45,7 @@ app.use(cookieParser());
 // CORS Configuration
 const allowedOrigins = process.env.NODE_ENV === 'production' 
   ? ['https://tege-jade.vercel.app' , 'https://www.mycoinharvest.com', 'https://mycoinharvest.com'] 
-  : ['http://localhost:5173' , 'https://www.mycoinharvest.com/'];
+  : ['http://localhost:5173' , 'https://www.mycoinharvest.com/' ,  'https://www.mycoinharvest.com', 'https://mycoinharvest.com'];
 
 app.use(cors({
   origin: allowedOrigins,
