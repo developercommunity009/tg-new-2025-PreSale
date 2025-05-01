@@ -28,13 +28,8 @@ const UserSchema = new Schema(
       minlength: 3,
     },
     wallet: {
-      type: String,
-      unique: true,
-      sparse: true, // this is important!
-      required: false,
-      trim: true,
-    },
-    
+      type: String
+  },  
     bio: {
       type: String,
       maxlength: 160,
