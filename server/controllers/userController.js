@@ -120,7 +120,7 @@ exports.forgetPassword = catchAsync(async (req, res, next) => {
     const resetToken = user.createPasswordResetToken();
     await user.save({ validateBeforeSave: false });
 
-    const resetURL = `http://localhost:5173/reset-password/${resetToken}`;
+    const resetURL = `https://www.mycoinharvest.com/reset-password/${resetToken}`;
     const message = `Hi, please click the link below to reset your password. This link is valid for 10 minutes:\n\n<a href="${resetURL}">Reset Password</a>`;
 
     try {
